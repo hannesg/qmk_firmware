@@ -17,6 +17,8 @@ jobs:
       - name: Merge Upstream
         uses: discdiver/merge-from-upstream-repo@v0.0.9
         with:
+          useremail: merge-bot@github.com
+          username: Merge Bot
           upstream: qmk/qmk_firmware      # set the upstream repo
           upstream-branch: master   # set the upstream branch to merge from
           branch:  hvg-bkb         # set the branch to merge to
