@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: hvg-bkb             # set the branch to merge to
           fetch-depth: 0
@@ -22,4 +22,3 @@ jobs:
           upstream: qmk/qmk_firmware      # set the upstream repo
           upstream-branch: master   # set the upstream branch to merge from
           branch:  hvg-bkb         # set the branch to merge to
-
