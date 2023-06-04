@@ -1,0 +1,24 @@
+name: Merge BastardKB
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+    # scheduled for 00:00 every Monday
+  workflow_dispatch: {}
+
+jobs:
+  merge-upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: hvg-bkb             # set the branch to merge to
+          fetch-depth: 0
+      - name: Merge Upstream
+        uses: discdiver/merge-from-upstream-repo@v0.0.9
+        with:
+          useremail: merge-bot@github.com
+          username: Merge Bot
+          upstream: Bastardkb/bastardkb-qmk      # set the upstream repo
+          upstream-branch: qmk-master   # set the upstream branch to merge from
+          branch:  hvg-bkb         # set the branch to merge to
