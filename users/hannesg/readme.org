@@ -1,0 +1,5 @@
+# Copyright 2022 Manna Harbour
+
+# Some changes by Hannesg
+
+- no autoshift
